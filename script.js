@@ -22,18 +22,26 @@ function check(){
 function findsize(s1, s2){
     let str1=s1.toLowerCase();
     let str2=s2.toLowerCase();
-    let i,j;
-    for( i=0;i<str1.length;i++){
-        for(j=0;j<str2.length;j++){
-            if(str1.charAt(i)==str2.charAt(j)){
-                str1=str1.substring(0,i)+str1.substring(i+1);
-                str2=str2.substring(0,j)+str2.substring(j+1);
-                i=0;
-                j=0;
-            }
+    let i=0;
+    let j=0;
+    while(j<str2.length && i<str1.length){
+        if(str1.charAt(i)==str2.charAt(j)){
+            str1=str1.substring(0,i)+str1.substring(i+1);
+            str2=str2.substring(0,j)+str2.substring(j+1);
+            i=0;
+            j=0;
+        }
+        else{
+            j++;
+        }
+        if(j==str2.length-1){
+            j=0;
+            i++;
         }
     }
     let s3=str1+str2;
+    console.log(s3);
+    console.log(s3.length);
     return s3.length;    
 }
 
@@ -94,4 +102,8 @@ function fullform(ful){
         }
     }
     return fulf;
+}
+
+function clearf(){
+    location.reload();
 }
