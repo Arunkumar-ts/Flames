@@ -5,10 +5,15 @@ function check(){
     let ss2=s2.value;
     let out=document.getElementById("out");
     if(ss1 && ss2){
-        let size=findsize(ss1,ss2);
-        let fflames=findflames(size);
-        let resultin=fullform(fflames);
-        out.value=resultin;
+        if(ss1!=ss2){
+            let size=findsize(ss1,ss2);
+            let fflames=findflames(size);
+            let resultin=fullform(fflames);
+            out.value=resultin;
+        }
+        else{
+            out.value="Given Names are same!";
+        }
     }
     else{
         out.value="Enter Names!";
