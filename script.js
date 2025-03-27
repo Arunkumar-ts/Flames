@@ -97,7 +97,7 @@ function fullform(ful){
             break;
         }
         case 'a' :{
-            fulf= "ARANGE";
+            fulf= "AFFECTION";
             break;
         }
     }
