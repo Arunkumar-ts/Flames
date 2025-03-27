@@ -34,7 +34,7 @@ function findsize(s1, s2){
         else{
             j++;
         }
-        if(j==str2.length-1){
+        if(j==str2.length){
             j=0;
             i++;
         }
